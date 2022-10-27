@@ -1,7 +1,7 @@
 FROM ubuntu:18.04
 
-LABEL Author="Prabin"
-LABEL E-mail="prawins2@gmail.com"
+LABEL Author="Rajendra"
+LABEL E-mail="dhakal09@gmail.com"
 LABEL version="0.1"
 
 # Install Required Package 
