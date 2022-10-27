@@ -1,9 +1,5 @@
 pipeline {
-    agent any
-    tools {
-        maven 'maven-3'
-        }
-    stages{
+        stages{
         stage('GIT checkout') {
             steps {
                 git credentialsId: 'git_creds', url: 'https://github.com/Rajtestgit/CalTech-PG-DevOps-Final-Capstone-Project.git'
