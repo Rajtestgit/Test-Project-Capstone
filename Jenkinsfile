@@ -7,7 +7,7 @@ pipeline {
     }
     agent any
     stages {
-        stage('checkout') {
+        stage(' GIT checkout') {
             steps {
                 git 'https://github.com/Rajtestgit/Test-Project-Capstone.git'
             }
