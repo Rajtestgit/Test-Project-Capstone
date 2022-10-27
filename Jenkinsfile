@@ -7,9 +7,9 @@ pipeline {
     }
     agent any
     stages {
-        stage('build checkout') {
+        stage('GIT checkout') {
             steps {
-               git branch: 'main', url: 'https://github.com/Rajtestgit/Test-Project-Capstone.git' 
+               git branch: 'main', credentialsId: 'git-creds', url: 'https://github.com/Rajtestgit/Test-Project-Capstone.git' 
             }
         }
 
