@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build checkout') {
             steps {
-                git 'https://github.com/Rajtestgit/Test-Project-Capstone.git'
+               git branch: 'main', url: 'https://github.com/Rajtestgit/Test-Project-Capstone.git' 
             }
         }
 
