@@ -1,0 +1,23 @@
+# flaskApp Deployment 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-web
+  labels:
+    app: flask-web  
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flask-web
+  template:
+    metadata:
+      labels:
+        app: flask-web
+    spec:
+      containers:
+      - name: flask-web
+        image: prabin/task_python:0.3
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
