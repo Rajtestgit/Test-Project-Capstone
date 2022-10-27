@@ -4,11 +4,7 @@ node{
                 git credentialsId: 'git_creds', url: 'https://github.com/Rajtestgit/Test-Project-Capstone.git'
            }
        }
-          stage('Build Package') {
-            steps {
-                sh 'mvn clean install'
-            }
-        }
+        python3 -m pip install --upgrade build
         stage('Docker build and Tag') {
             steps{
                 sh 'docker build -t ${JOB_NAME}:v1.${BUILD_NUMBER} .'
