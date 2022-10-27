@@ -1,13 +1,13 @@
 def img
 pipeline {
     environment {
-        registry = "rajendocker/python-jenkins" //To push an image to Docker Hub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
+        registry = "rajendocker/docker-app" //To push an image to Docker Hub, you must first name your local image using your Docker Hub username and the repository name that you created through Docker Hub on the web.
         registryCredential = 'docker-creds'
         dockerImage = ''
     }
     agent any
     stages {
-        stage(' GIT checkout') {
+        stage('build checkout') {
             steps {
                 git 'https://github.com/Rajtestgit/Test-Project-Capstone.git'
             }
