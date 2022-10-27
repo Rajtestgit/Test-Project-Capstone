@@ -1,0 +1,16 @@
+#Service - LoadBalancer 
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-web
+  labels: 
+    app: flask-web
+spec:
+  selector:
+    app: flask-web
+  type: LoadBalancer 
+  ports:
+  - protocol: TCP
+    nodePort: 31000
+    port: 80
+    targetPort: 5000
