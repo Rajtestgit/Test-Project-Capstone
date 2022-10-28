@@ -5,6 +5,7 @@ pipeline {
         registryCredential = 'docker-creds'
         dockerImage = ''
     }
+}
     agent any
     stages {
         stage('GIT checkout') {
