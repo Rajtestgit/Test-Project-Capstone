@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: flask-web
-        image: prabin/task_python:0.3
+        image: rajendra/task_python:0.3
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
